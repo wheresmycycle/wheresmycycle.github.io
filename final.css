@@ -1,0 +1,133 @@
+*
+{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+body{
+      font-family:sans-serif ;
+}
+
+nav{
+      height: 10vh;
+      background-image: linear-gradient(to left,rgb(228, 61, 61), white);
+}
+.nav-links
+{
+   display: flex;   
+   list-style: none;
+   width: 50%;
+  
+   height: 100%;
+   justify-content: space-around;
+   align-items: center;
+   margin-left: auto;
+}
+#logo
+{
+      position: absolute;
+      left: 5px;
+}
+
+.nav-links li a{
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+}
+.nav-links li a:hover
+{
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      background-color: red;
+      padding: 3vh;
+      
+}
+.landing
+{
+      background-size: cover;
+      background-image:linear-gradient(to bottom, rgba(252, 252, 252, 0.801), rgba(255, 118, 6, 0.151)),
+    url('./images/man\ \(1\).png');
+      
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+}
+.landing h1
+{
+      
+      margin: 10px;
+font-size: 35px;
+color: black;
+}
+.landing h1 span{
+      font-size: 20px;
+      letter-spacing: 5px;
+      color: black;
+}
+
+.video
+{
+      margin: 100px;
+}
+.video iframe{
+      margin: 2px solid red;
+      border-radius: 10px;
+      width:100%;
+      height:300px;
+}
+@media screen and (max-width:768px)
+{
+      #logo
+      {
+            display: none;
+      }
+      .line
+      {
+            width: 30px;
+            height: 3px;
+            background: white;
+            margin: 5px;
+      }
+      nav 
+      {
+            position: relative;
+      }
+      .hamburger
+      {
+          position: absolute;
+          cursor: pointer;
+          right: 5%;
+          top: 50%;
+          transform: translate(-5%,-50%);
+          z-index: 2;  
+      }
+      .nav-links
+      {
+            position: fixed;
+            background:rgb(228, 61, 61);
+            
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            clip-path: circle(100px at 90% -20%);
+            -webkit-clip-path:circle(100px at 90% -20%);
+            transition: all 1s ease-out;
+      }
+      .nav-links.open
+      {
+            clip-path: circle(1000px at 90% -20%);
+            -webkit-clip-path:circle(1100px at 90% -20%); 
+      }
+      .landing
+      {
+            flex-direction: column;
+            padding-top: 20px;
+      }
+      
+}
